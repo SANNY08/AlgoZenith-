@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solution() {
+    int l1, r1, l2, r2;
+    cin >> l1 >> r1 >> l2 >> r2;
+    if (r2 < l1 || l2 > r1) {
+        cout << -1 << endl;
+        return;
+    }
+    if (r1 < l2 || l1 > r2) {
+        cout << -1 << endl;
+        return;
+    }
+    int l = max(l1, l2);
+    int r = min(r1, r2);
+    cout << l << " " << r << endl;
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+    int T;
+    cin >> T;
+    while (T--) {
+      solution();
+    }
+    return 0;
+}
