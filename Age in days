@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int y = n/365;
+        n = n%365;
+        int m = n/30;
+        n = n%30;
+        int d = n;
+        cout << y << " years\n" << m << " months\n" << d << " days\n";
+    }
+
+    return 0;
+}
