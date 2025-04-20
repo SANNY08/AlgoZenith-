@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+// O(n) time
+// O(1) space
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    int n;
+    cin >> n;
+    int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
+    // odd, even, pos, neg
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        if (x % 2)
+            c1++;
+        else
+            c2++;
+        if (x > 0)
+            c3++;
+        else if (x < 0)
+            c4++;
+    }
+    cout << "Even: " << c2 << "\n";
+    cout << "Odd: " << c1 << "\n";
+    cout << "Positive: " << c3 << "\n";
+    cout << "Negative: " << c4 << "\n";
+    return 0;
+}
