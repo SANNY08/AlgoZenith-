@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//O(T*log(N_max)) time complexity
+//O(1) space complexity
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        // printing number in reverse order
+        if (n == 0) // corner case if n==0
+        {
+            cout << "0";
+        }
+        while (n > 0)
+        {
+            cout << n % 10 << " ";
+            n /= 10;
+        }
+        cout << "\n"; // linefeed after each case
+    }
+
+    return 0;
+}
